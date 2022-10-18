@@ -8,7 +8,7 @@ int Lenght, sum, count;
 
 static void startMyMethod(out int[] array, out Random rand, out int Lenght, out int sum, out int count)
 {
-    array = new int[33];
+    array = new int[16];
     rand = new Random();
     Lenght = array.Length;
     sum = 0;
@@ -20,12 +20,13 @@ static void CountMyMethod(int[] array, Random rand, int Lenght, ref int sum, ref
     for (int i = 0; i < Lenght; i++)
     {
         array[i] = rand.Next(-999, 999);
-        Console.Write(array[i] + ",\t");
+        Console.Write($" { array[i] } ");
         if (array[i] >= 1)
             sum = sum + 1;
         count = count + 1;
     }
-Console.Write("Колличество чисел больше нуля = " + sum);
+    Console.WriteLine();
+    Console.Write("Колличество чисел больше нуля = " + sum);
 }
 
 startMyMethod(out array, out rand, out Lenght, out sum, out count);

@@ -9,19 +9,19 @@ class Program
     {
         int[] array = new int[10];
         Random rand = new Random();
-        for(int i = 0; i < array.Length; i++)
-            {
-            array[i] = rand.Next(1,99);
-            }
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i] = rand.Next(1, 99);
+        }
         int sum = 0;
-        for(int i = 0; i < array.Length; i++)
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i % 2 != 0)
             {
-            if(i % 2 != 0) 
-                {
                 sum += array[i];
-                }
-            Console.Write(array[i] + ",");
             }
-    Console.WriteLine("[" + sum + "]" + " <-Сумма чисел на нечетных позициях");
+            Console.Write(array[i] + ",");
+        }
+        Console.WriteLine("[" + sum + "]" + " <-Сумма чисел на нечетных позициях");
     }
 }

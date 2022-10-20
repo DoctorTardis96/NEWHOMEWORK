@@ -6,22 +6,22 @@ class Program
 {
     static void Main(string[] args)
     {
-    int[] array = new int[6];
-    Random rand = new Random();
-    for (int i = 0; i < array.Length; i ++)
+        int[] array = new int[6];
+        Random rand = new Random();
+        for (int i = 0; i < array.Length; i++)
         {
-            array[i] = rand.Next(100,999);
+            array[i] = rand.Next(100, 999);
         }
-    int y = 0;
-    for(int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 == 0)
+        int y = 0;
+        for (int i = 0; i < array.Length; i++)
         {
-            y++;
+            if (array[i] % 2 == 0)
+            {
+                y++;
+            }
+            Console.Write(array[i] + "|");
         }
-    Console.Write(array[i] + "|");
-    }
-    Console.WriteLine("["+ y + "]" + " <-кол-во четных чисел");
+        Console.WriteLine("[" + y + "]" + " <-кол-во четных чисел");
 
     }
 
